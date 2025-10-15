@@ -46,12 +46,13 @@ img {
 
 }
                                            /* HEADER */
-  .header-container {
+ .header{
+border-bottom: 1px solid var(--cornflower);
+ }
+.header-container {
     display: flex;
     align-items: center;
-    padding: 24px 0;
     justify-content: space-between;
-    border-bottom: 1px solid var(--cornflower);
   }
   .menu-list {
       display: flex;
@@ -61,6 +62,7 @@ img {
   .address-list {
       display: flex;
         gap: 40px;
+        padding: 24px 0;
   }
 .logo {
     font-family: var(--second-family);
@@ -70,6 +72,7 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--iris);
+    margin-right: 76px;
 }
 .logo-header {
     color: var(--navy-blue);
@@ -79,7 +82,7 @@ img {
 }
 .menu {
     display: flex;
-    gap: 78px;
+    align-items: center;
 }
 
 .menu-link {
@@ -128,8 +131,7 @@ img {
  /* HERO */
  .hero-section {
     background-color: var(--navy-blue);
-    padding-top: 191px;
-    padding-bottom: 188px;
+    padding: 188px 0;
     text-align: center;
  }
 
@@ -139,6 +141,8 @@ img {
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--white);
+    max-width: 496px;
+    margin: auto;
 }
 .hero-button {
     font-weight: 500;
@@ -148,8 +152,15 @@ img {
     color: var(--white);
     background: var(--iris);
     cursor: pointer;
-    padding: 16px 32px;
     margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+
 
     
 }
@@ -160,8 +171,12 @@ img {
 /* FEATURES */
 .features-list {
     display: flex;
-    gap: 8px;
-
+}
+.features-item{
+    margin-right: 8px;
+}
+.features-item:last-child {
+    margin-right: 0;
 }
 .features-item-title {
     font-weight: 500;
@@ -169,7 +184,7 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 .features-item-text {
     font-size: 16px;
@@ -177,12 +192,14 @@ img {
     letter-spacing: 0.02em;
 }
 /* TEAM */
+.team-cart{
+padding: 32px 0;
+}
 .team-section{
     background-color: var(--cloud);
 }
 .team-list {
     display: flex;
-    gap: 24px;
 }
 .team-title{
     font-weight: 700;
@@ -192,15 +209,19 @@ img {
     text-align: center;
     text-transform: capitalize;
     color: var(--navy-blue);
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 .team-item {
     background: var(--white);
     border-radius: 0 0 4px 4px;
-    padding: 0px 0px 32px;
-    width: calc((100% - 72px) / 4);
+    /*padding: 0px 0px 32px;*/
+    flex-basis: calc((100% - 72px) / 4);
     height: 380px;
+    margin-right: 24px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.team-item:last-child{
+    margin-right: 0;
 }
 .team-item-title {
     font-weight: 500;
@@ -209,8 +230,8 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--navy-blue);
-    padding-top: 32px;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
+    text-align: center;
 }
 .team-item-text {
     font-size: 16px;
@@ -222,14 +243,15 @@ img {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+}
+.portfolio-item:not(:nth-child(3n)) {
+    margin-right: 24px;
 }
 .portfolio-card {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 8px;
     border-bottom: 1px solid var(--cornflower);
     padding: 32px 16px;
 }
@@ -241,7 +263,7 @@ img {
     text-align: center;
     color: var(--navy-blue);
     text-transform: capitalize;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 .portfolio-item-title {
     font-weight: 500;
@@ -249,6 +271,7 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
+    margin-bottom: 8px;
 }
 .portfolio-item-text {
     font-size: 16px;
@@ -258,16 +281,15 @@ img {
                                      /* FOOTER */
   .footer {
     background: var(--navy-blue);
-  }
-  .footer-container{
-    padding-bottom: 100px;
-    padding-top: 100px;
-    
+    padding: 100px 0;
   }
   .footer-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
-    padding-top: 16px;
+  }
+  .footer-link{
+    display: inline-block;
+    margin-bottom: 16px;
   }
